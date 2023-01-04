@@ -9,7 +9,8 @@ public class TemporaryPoint {
     private double longitude;
     private double course;
 
-    public TemporaryPoint(double height, double speed, double latitude, double longitude, double course) {
+    public TemporaryPoint(double height, double speed,
+                          double latitude, double longitude, double course) {
         this.height = height;
         this.speed = speed;
         this.latitude = latitude;
@@ -66,10 +67,16 @@ public class TemporaryPoint {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TemporaryPoint that = (TemporaryPoint) o;
-        return Double.compare(that.height, height) == 0 && Double.compare(that.speed, speed) == 0 && Double.compare(that.latitude, latitude) == 0 && Double.compare(that.longitude, longitude) == 0;
+        return Double.compare(that.height, height) == 0 && Double.compare(that.speed, speed) == 0
+                && Double.compare(that.latitude, latitude) == 0
+                && Double.compare(that.longitude, longitude) == 0;
     }
 
     @Override
@@ -79,12 +86,12 @@ public class TemporaryPoint {
 
     @Override
     public String toString() {
-        return "TemporaryPoint{" +
-                "height=" + height +
-                ", speed=" + speed +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", course=" + course +
-                '}';
+        return "TemporaryPoint{"
+                + "height=" + height
+                + ", speed=" + speed
+                + ", latitude=" + latitude
+                + ", longitude=" + longitude
+                + ", course=" + course
+                + '}';
     }
 }

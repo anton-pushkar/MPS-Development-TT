@@ -6,7 +6,8 @@ public class AirplaneCharacteristics {
     private double heightChange;
     private double courseChange;
 
-    public AirplaneCharacteristics(double maxSpeed, double speedChange, double heightChange, double courseChange) {
+    public AirplaneCharacteristics(double maxSpeed, double speedChange,
+                                   double heightChange, double courseChange) {
         this.maxSpeed = maxSpeed;
         this.speedChange = speedChange;
         this.heightChange = heightChange;

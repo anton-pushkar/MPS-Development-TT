@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Flight {
     private Long number;
-    List<WayPoint> wayPoints;
-    List<TemporaryPoint> passedPoints;
+    private List<WayPoint> wayPoints;
+    private List<TemporaryPoint> passedPoints;
 
     public Long getNumber() {
         return number;
@@ -33,10 +33,10 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "number=" + number +
-                ", wayPoints=" + wayPoints +
-                ", passedPoints=" + passedPoints +
-                '}';
+        return "Flight{"
+                + "number=" + number
+                + ", wayPoints=" + wayPoints
+                + ", passedPoints=" + passedPoints
+                + '}';
     }
 }
