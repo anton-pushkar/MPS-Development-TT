@@ -49,20 +49,26 @@ public class WayPoint {
 
     @Override
     public String toString() {
-        return "WayPoint{" +
-                "height=" + height +
-                ", speed=" + speed +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                '}';
+        return "WayPoint{"
+                + "height=" + height
+                + ", speed=" + speed
+                + ", latitude=" + latitude
+                + ", longitude=" + longitude
+                + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         WayPoint point = (WayPoint) o;
-        return Double.compare(point.height, height) == 0 && Double.compare(point.speed, speed) == 0 && Double.compare(point.latitude, latitude) == 0 && Double.compare(point.longitude, longitude) == 0;
+        return Double.compare(point.height, height) == 0 && Double.compare(point.speed, speed) == 0
+                && Double.compare(point.latitude, latitude) == 0
+                && Double.compare(point.longitude, longitude) == 0;
     }
 
     @Override
